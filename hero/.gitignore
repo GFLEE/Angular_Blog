@@ -13,7 +13,7 @@
 .classpath
 .c9/
 *.launch
-.settings/
+.settings/  
 
 # IDE - VSCode
 .vscode/*
