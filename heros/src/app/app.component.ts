@@ -1,13 +1,20 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
-export class Hero {
-  id: number;
-  name: string;
-  
+import { Hero } from "./hero";
+import { HeroService } from "./hero.service"
+import { OnInit } from "@angular/core";
+
+export class AppComponent implements OnInit(){
+
+ 
+   
+
+
+
 }
 
 export const HEROES: Hero[] = [
-  { id:11, name:"Mr. Nice" },
+  { id: 11, name: "Mr. Nice" },
   { id: 12, name: "Narco" },
   { id: 13, name: "Bombasto" },
   { id: 14, name: "Celeritas" },
@@ -23,7 +30,7 @@ export const HEROES: Hero[] = [
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
-    
+
   styles: [
     `
   h1 {
@@ -89,43 +96,51 @@ h2{
   }
   `
   ],
-  template: `<h1>{{title}}</h1>
-
-  <h1>============================================</h1>
-  <h2>My Heros Goes Here:</h2>
-  <ul class="heroes">
-  <li *ngFor="let hero of heroes" 
-  [class.selected]="hero===selectedHero"
-  (click)="onSelect(hero)">
-  <span class='badge'>{{hero.id}}</span>  {{hero.name}}
-  </li>
-  </ul>      
-  <h2>============================================</h2>
-  <div>
-
-  <div  *ngIf="selectedHero">
-  <div>
-  <span><label>id: </label>{{selectedHero.id}}</span>
-  </div>
- 
+  template: `
+  <h1>{{title}}</h1>
   
-  <div>
-  <label>name: </label>
-  <input class="input" [(ngModel)]="selectedHero.name" placeholder="name" />
-  </div>
-  </div>
-
-
-  <br><br><br><br>
+    <h1>============================================</h1>
+    <h2>   Heros Goes Here:  </h2>
+    <ul class="heroes">
+    <li *ngFor="let hero of heroes" 
+    [class.selected]="hero===selectedHero"
+    (click)="onSelect(hero)">
+    <span class='badge'>{{hero.id}}</span>  {{hero.name}}
+    </li>
+    </ul>      
+    <h2>============================================</h2>
+  <hero-detail [hero]="selectedHero"></hero-detail>
   `
 })
 export class AppComponent {
   title = "Tour of Heroes"; //应用的名字
-   heroes = HEROES; // 让HEROS暴露               //
-  selectedHero: Hero;//  the hero selected ==>  
-  onSelect(hero:Hero): void {
+               //
+  selectedHero: Hero; //  the hero selected ==>
+  onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
+  heroes:Hero[];
+ 
+    providers:[HeroService];
+    getHeroes():void{
+      this.heroes=this.heroService.getHeroes();
+    };
+
+
+    constructor(private heroService:HeroService){
+      
+      };
+
+
+      
+       ngOnInit() :void {
+         //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+         //Add 'implements OnInit' to the class.
+         this.getHeroes();
+      
+       }
+      
+      
 }
 
 
