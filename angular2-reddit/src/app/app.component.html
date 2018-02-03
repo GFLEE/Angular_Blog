@@ -15,12 +15,14 @@
 </form>
 <br>
 
+
 <!-- ============================ -->
 <div calss="ui grid posts">
 
-  <app-article 
-  *ngFor='let article of aritcles' 
-  [article]='article'>
+<app-article 
+*ngFor='let article of sortedArticles()'
+[article]='article'>
 </app-article>
+
 
 </div>

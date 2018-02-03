@@ -8,21 +8,30 @@ import { Article } from "./article/article.model";
 })
 export class AppComponent {
   articles: Article[];
-  
+
   constructor() {
     this.articles = [
-      new Article("one", "https//localhost:4200", 20),
-      new Article("two", "https//localhost:4200", 20),
-      new Article("three", "https//localhost:4200", 20),
-      new Article("four", "https//localhost:4200", 20)
+      new Article("angular2", "https//localhost:4200", 3),
+      new Article("vue2", "https//localhost:4201", 23),
+      new Article("react2", "https//localhost:4202", 1),
+      new Article("bootstrap2", "https//localhost:4203", 15)
     ];
   }
 
   addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
     console.log(`Adding article title:${title.value} , link:${link.value}`);
     this.articles.push(new Article("add_new", "#", 0));
+
     title.value = "";
     link.value = "";
+    
     return false;
   }
+
+  sortedArticles():Article[]{
+
+  return this.articles.sort((a:Article,b:Article) => a.votes-b.votes);
+  
+  }
+
 }

@@ -11,13 +11,13 @@ import { Article } from "./article.model";
 export class ArticleComponent implements OnInit {
   @Input() article: Article;
 
-  // constructor() {
-  //  this.article=new Article('ANgular2.0','http://localhost:4200',15)
+  constructor() {
+  //  this.article=new Article('Angular2.0','http://localhost:4200',15)
 
   // this.title='Angular 2';
   // this.link='http://localhost:4200';
   // this.votes=10;
-  //  }
+   }
 
   voteUp(): boolean {
     this.article.votes += 1;
