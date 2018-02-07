@@ -65,22 +65,40 @@
 //而且=>语法和外部代码拥有同样的this；
 
 
-var man={
-    name:"lee",
-    age:20,
-    like:'guitar',
-    guitars:['taylor','martin'],
+// var man={
+//     name:"lee",
+//     age:20,
+//     like:'guitar',
+//     guitars:['taylor','martin'],
+    
+//     get:function(){
+//         this.guitars.forEach(function(g){
+//             var self=this;
+//             console.log(g);
+//             console.log(self.age)
+            
+//         })  //this 即不是指代man，显示undefined,this是function()自己
+//    },
+//      get_name:function(){
+//           this.guitars.forEach((g)=>{
+//               console.log(g)
+//               console.log(this.name)
+//               console.log(this);
+//             }
+             
+//             )  //this指向函数的调用者， 即指代man
+//      }
 
-     get:function(guitars){
-          this.guitars.forEach(function(g){
-              console.log(g)
-          })
-     }
+// }
 
-}
-
-
+// man.get();
+// man.get_name();
 
 
 //箭头函数是处理内联函数的好办法。这也让我们在JavaScript中更容易使用高阶函数。
+
+//=============================
+//模板字符串，类似于jsp中的
+var Name:string='lee';
+console.log(`hello ${Name}`)  //使用  ``  而不是 '',可多行插入
 
