@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from './product.module'
-""
+
 @Component({
   selector: 'inventory-app',
   templateUrl: './app.component.html',
