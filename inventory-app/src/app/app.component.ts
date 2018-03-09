@@ -33,7 +33,7 @@ export class AppComponent {
 
   productWasSelected(product:Product){
 
-    console.log('product was selected:',product)
+    console.log('product was selected:',product.name)
 
   }
 } 

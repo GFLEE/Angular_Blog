@@ -99,6 +99,21 @@
 
 //=============================
 //模板字符串，类似于jsp中的
-var Name:string='lee';
-console.log(`hello ${Name}`)  //使用  ``  而不是 '',可多行插入
+// var Name:string='lee';
+// console.log(`hello ${Name}`) 
+ //使用  ``  而不是 '',可多行插入
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
