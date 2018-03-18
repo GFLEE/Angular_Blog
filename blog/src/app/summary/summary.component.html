@@ -1,0 +1,22 @@
+
+<br>
+<div class='article' infinite-scroll (scrolled)="onScroll()">
+<p>ssss</p>
+<section *ngFor='let article of articles'>
+
+  <h2>
+    <a class='title' [routerLink]="['/articles',article._id]">{{article.title}}</a>
+    <time class='date'>{{article.date}}</time>
+  </h2>
+
+  <p class='info'>字数 {{article.word}}  阅读 {{article.view}} 评论 {{article.comment ||0 }} </p>
+<p>{{article.summary}}.....</p>
+
+<p>
+  <span class='label' *ngFor='let label of article.labels'>{{label}}</span>
+</p>
+
+
+
+</section>
+</div>

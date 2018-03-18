@@ -1,0 +1,27 @@
+.nav{
+        
+      margin-left:10%;
+      border:1px solid red;
+
+}
+.logo{
+  width:50px;
+  height:50px
+}
+.headers{
+        list-style-type: none;
+}
+.headers >li{
+        display: inline;
+        padding: 40px;
+}
+.headers >li a:hover{
+        color:goldenrod;
+        transition-duration: 2ms;
+        text-decoration-color: navajowhite; 
+}
+a
+{
+        color:gray;
+  text-decoration-line: none;
+}
