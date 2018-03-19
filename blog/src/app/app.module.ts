@@ -9,6 +9,7 @@ import { SummaryComponent } from './summary/summary.component';
 import { ArchiveComponent } from './archive/archive.component';
 import { DetailComponent } from './detail/detail.component';
 import { InfiniteScrollModule } from 'angular2-infinite-scroll';
+import { ArticleService } from './article.service';
 
 // import { RouterModule } from '../app/app-routing/app-routing.module';
 
@@ -23,7 +24,7 @@ import { InfiniteScrollModule } from 'angular2-infinite-scroll';
     DetailComponent,
   ],
   imports: [AppRoutingModule, BrowserModule, InfiniteScrollModule],
-  providers: [],
+  providers: [ArticleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

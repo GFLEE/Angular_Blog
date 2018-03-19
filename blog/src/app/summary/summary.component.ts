@@ -9,11 +9,32 @@ import { ArticleService } from '../article.service';
 })
 export class SummaryComponent implements OnInit {
   articles: Article[];
-  constructor(articleService: ArticleService) {
+  constructor(public articleService: ArticleService) { }
+
+  getData(): Article[] {
+
+    this.articles = this.articleService.getArticles();
+    console.log(this.articles);
+    return this.articles;
+    // this.articleService.getArticles();
+  }
+
+  addArticles(): void {
+
+
+  }
+  onScroll(event): void {
+
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      console.log('At the bottom！', event);
+      this.addArticles();
+
+    }
 
   }
 
   ngOnInit() {
+    this.getData();
   }
 
 }

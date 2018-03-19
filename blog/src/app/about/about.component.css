@@ -1,7 +1,9 @@
 .about{
  border:1px solid ;
- width:100%;
+ width:90%;
  height:250px;
+ margin-top:4%;
+ margin-left:18%;
 }
 .wrapper{
   border:1px solid red ;

@@ -8,5 +8,5 @@ export class Article {
         labels: string[];
         summary: string;
         html: string;
-        date: Date;
+        date: string;
 }

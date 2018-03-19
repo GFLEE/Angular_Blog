@@ -1,6 +1,46 @@
 .article{
         width: 90%;
         border:1px solid red;
-        margin-left: 18%
+        margin-left: 18%;
+        margin-top:4%;
      
+}
+
+.section{
+        border:1px solid red;
+        width:85%;
+        height:30%;
+        margin-top:20px;  
+}
+.title{
+        text-decoration: none;
+        color:Black;
+        font-size: 50px;
+}
+.date{
+        font-size:15px;
+        float:right;
+        border:1px solid red;
+        color:grey;
+        opacity:0.7; 
+}
+.info{
+  
+}
+
+.info >li{
+        display: inline;
+        list-style-type: none;
+        padding-left:30px;
+        color:grey;
+        font-size: 10px;
+}
+
+.summary{
+
+}
+
+.label{
+
+        color:goldenrod;
 }
