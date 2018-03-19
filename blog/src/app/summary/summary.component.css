@@ -1,7 +1,7 @@
 .article{
-        width: 90%;
+        width: 80%;
         border:1px solid red;
-        margin-left: 18%;
+        margin-left: 21%;
         margin-top:4%;
      
 }
@@ -25,7 +25,8 @@
         opacity:0.7; 
 }
 .info{
-  
+  border:1px solid red;
+
 }
 
 .info >li{
@@ -37,10 +38,10 @@
 }
 
 .summary{
-
+padding-left:8%;
 }
 
 .label{
-
+        padding-left:8%;
         color:goldenrod;
 }

@@ -1,18 +1,12 @@
 .about{
- border:1px solid ;
- width:90%;
- height:250px;
- margin-top:4%;
- margin-left:18%;
+  width: 90%;
+  height:90%;
+  border:1px solid red;
+  margin-left: 21%;
+  margin-top:4%;
 }
 .wrapper{
   border:1px solid red ;
   width:50%;
   height:100%;
-}
-.profile{
-        text-align: center;
-        border:1px solid ;
-        width:50%;
-        height:90%;
 }
