@@ -8,33 +8,63 @@ import { ArticleService } from '../article.service';
   styleUrls: ['./summary.component.css']
 })
 export class SummaryComponent implements OnInit {
+
   articles: Article[];
-  constructor(public articleService: ArticleService) { }
+  array = [];
+  // bug array:Article[];push not undefined,
+  sum = 3;
+  public noMore = true;
+  public delay = true;
+  public end = false;
+  constructor(public articleService: ArticleService) {
+    setTimeout(function () {
+      this.delay = true;
+    }, 700);
+
+  }
 
   getData(): Article[] {
 
     this.articles = this.articleService.getArticles();
-    console.log(this.articles);
+
     return this.articles;
     // this.articleService.getArticles();
   }
 
-  addArticles(): void {
+  addArticles(start, end): Article[] {
 
+    const len = end - start;
 
-  }
-  onScroll(event): void {
+    if ((this.array.length + len) >= (this.articles.length)) {
 
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-      console.log('At the bottom！', event);
-      this.addArticles();
+      console.log('No more');
+      this.noMore = false;
+      this.end = true;
+      return this.array;
+
+    } else {
+      for (let i = start; i < end; i++) {
+        this.array.push(this.articles[i]);
+      }
+      console.log(this.array);
+      return this.array;
 
     }
 
   }
+  loadMore(): void {
+
+    const num = this.sum;
+    this.sum += 1;
+    this.addArticles(num, this.sum);
+  }
 
   ngOnInit() {
+
+
+    console.log(this.delay);
     this.getData();
+    this.addArticles(0, this.sum);
   }
 
 }

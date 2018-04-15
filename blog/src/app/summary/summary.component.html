@@ -1,26 +1,31 @@
-
 <br>
-<div class='article' infinite-scroll (scrolled)="onScroll($event)">
-<p>{{articles.view}}</p>
-<section class='section' *ngFor='let article of articles'>
+<div *ngIf='delay' class='article'>
+  <p>{{articles.view}}</p>
+  <section class='section' *ngFor='let article of array'>
 
-  <h2>
-    <a class='title' [routerLink]="['/articles',article._id]">{{article.title}}</a>
-    <time class='date'>{{article.date}}</time>
-  </h2>
-
-<ul class='info'>
-  <li>字数 {{article.word}}</li>
-  <li>阅读 {{article.view}}</li>
-  <li>评论 {{article.comment ||0 }}</li>
-</ul>
-  <p class='summary'>{{article.summary}}.....</p>
-
-<p>
-  <i class='label' *ngFor='let label of article.labels'>{{label}}</i>
-</p>
+    <h2>
+      <a class='title' [routerLink]="['/articles',article._id]">{{article.title}}</a>
+      <i>
+        <time class='date'>{{article.date}}</time>
+      </i>
+    </h2>
 
 
+    <p class='summary'>{{article.summary}}.....</p>
 
-</section>
+    <ul class='info'>
+      <li><img src='../../assets/imgs/word.png'/> {{article.word}}</li>
+      <li><img src='../../assets/imgs/read.png'/> {{article.view}}</li>
+      <li><img src='../../assets/imgs/comment.png'/> {{article.comment ||0 }}</li>
+    </ul>
+    <p>
+      <i class='label' *ngFor='let label of article.labels'>{{label}}</i>
+    </p>
+
+
+
+  </section><br>
+  <app-no-more *ngIf='end'></app-no-more>
+  <app-load-more  *ngIf='noMore' (click)='loadMore()'></app-load-more>
+
 </div>

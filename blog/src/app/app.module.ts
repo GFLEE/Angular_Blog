@@ -10,6 +10,8 @@ import { ArchiveComponent } from './archive/archive.component';
 import { DetailComponent } from './detail/detail.component';
 import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 import { ArticleService } from './article.service';
+import { LoadMoreComponent } from './load-more/load-more.component';
+import { NoMoreComponent } from './no-more/no-more.component';
 
 // import { RouterModule } from '../app/app-routing/app-routing.module';
 
@@ -22,6 +24,8 @@ import { ArticleService } from './article.service';
     SummaryComponent,
     ArchiveComponent,
     DetailComponent,
+    LoadMoreComponent,
+    NoMoreComponent,
   ],
   imports: [AppRoutingModule, BrowserModule, InfiniteScrollModule],
   providers: [ArticleService],
