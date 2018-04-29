@@ -1,0 +1,13 @@
+.test{
+        width:400px;
+        height:400px;
+       
+}
+.container{
+      width:80%;
+      height:auto;
+      border:1px solid red;
+      margin-left:15%;
+        
+}
+

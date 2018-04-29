@@ -4,6 +4,7 @@
   <section class='section' *ngFor='let article of array'>
 
     <h2>
+        <!-- (click)='detail()' -->
       <a class='title' [routerLink]="['/articles',article._id]">{{article.title}}</a>
       <i>
         <time class='date'>{{article.date}}</time>

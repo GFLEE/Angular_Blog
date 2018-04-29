@@ -12,6 +12,7 @@ import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 import { ArticleService } from './article.service';
 import { LoadMoreComponent } from './load-more/load-more.component';
 import { NoMoreComponent } from './no-more/no-more.component';
+import { LoadingComponent } from './loading/loading.component';
 
 // import { RouterModule } from '../app/app-routing/app-routing.module';
 
@@ -26,6 +27,7 @@ import { NoMoreComponent } from './no-more/no-more.component';
     DetailComponent,
     LoadMoreComponent,
     NoMoreComponent,
+    LoadingComponent,
   ],
   imports: [AppRoutingModule, BrowserModule, InfiniteScrollModule],
   providers: [ArticleService],

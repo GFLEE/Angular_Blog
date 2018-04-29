@@ -1,7 +1,4 @@
 .nav{
-        
-     
-     
       position: fixed;
       margin-top:0;
       z-index: 9999;
@@ -25,7 +22,7 @@
 
 .headers >li a:hover{
         color:goldenrod;
-        transition: 0.5s;
+        transition: 0.4s;
         transform: scale(1); 
         text-decoration-style: solid;
         text-decoration-color: navajowhite; 
