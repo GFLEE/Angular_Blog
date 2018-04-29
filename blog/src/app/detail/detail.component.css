@@ -1,13 +1,23 @@
-.test{
-        width:400px;
-        height:400px;
-       
+
+.detail{
+      /* border:1px solid red; */
 }
-.container{
-      width:80%;
-      height:auto;
-      border:1px solid red;
-      margin-left:15%;
-        
+h1{
+      /* border:1px solid red; */
+     margin-left:40%
 }
+.label{
+      /* border:1px solid red; */
+      margin-left:20%  
+
+}
+.view{
+      /* border:1px solid red; */
+      margin-left:50%
+}
+.sum{
+      /* border:1px solid red; */
+      margin-left:17%
+}
+
 
